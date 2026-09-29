@@ -1,0 +1,176 @@
+/* --- VARIABLES: Personaliza aquí tus colores y fuentes --- */
+:root {
+    --color-fondo: #ffffff;         /* Cambia tu color de fondo */
+    --color-principal: #333333;     /* Cambia tu color principal */
+    --color-acento: #666666;        /* Cambia tu color de detalles/botones */
+    --color-texto: #111111;         /* Cambia tu color de texto */
+    --font-base: sans-serif;        /* Cambia tu tipografía o fuente */
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- ESTRUCTURA FLEXBOX MOBILE FIRST --- */
+
+/* Header & Nav */
+header {
+    display: flex;
+    flex-direction: column; /* Apilado en móviles */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+/* Main */
+main {
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto;
+}
+
+section, aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+
+
+
+/* Estilos para el carrusel de posturas */
+.carrusel-container {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.tarjeta-postura {
+    background: white;
+    min-width: 250px;
+    max-width: 280px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+.tarjeta-postura h4 {
+    color: #4a5d4e;
+    margin-bottom: 8px;
+}
+/* --- Paleta de Estilo Profesional: Atardecer de Playa --- */
+:root {
+    --color-arena: #fdfbf7;
+    --color-tierra-suave: #d9cab3;
+    --color-atardecer: #e07a5f;
+    --color-oceano: #3d5a80;
+    --color-texto-oscuro: #2b2d42;
+}
+
+/* Aplicando diseño limpio y colores a toda la página */
+body {
+    background-color: var(--color-arena);
+    color: var(--color-texto-oscuro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo elegante para la sección de bienvenida/portada */
+main > section:first-of-type {
+    background: linear-gradient(135deg, #fdfbf7 0%, #f4ece1 100%);
+    padding: 40px 20px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+main > section:first-of-type h2 {
+    color: var(--color-oceano);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+main > section:first-of-type p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+/* Imagen de portada con bordes modernos y sombra suave */
+main > section:first-of-type img {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(61, 90, 128, 0.15);
+    transition: transform 0.3s ease;
+}
+
+main > section:first-of-type img:hover {
+    transform: scale(1.01);
+}
+
+/* Títulos de las demás secciones */
+h2 {
+    color: var(--color-oceano);
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
