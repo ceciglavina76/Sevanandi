@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilo Yoga</title>
-    <meta name="description" content="Descubre como una práctica conciente de Yoga puede transformar tu perspectiva y desde la respiración conectar mente y cuerpo, y encontrar calma en tu inteior
-
-    
-    ">
+    <title>Sevanandi — Yoga Integral, Filosofía y Biodescodificación</title>
+    <meta name="description" content="Descubre cómo una práctica consciente de Yoga Integral y Biodescodificación puede transformar tu perspectiva, conectar mente y cuerpo desde la respiración y encontrar calma interior a tu propio ritmo.">
     <!-- Enlace a tu archivo de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,148 +13,517 @@
     <!-- LANDMARK: Cabecera principal -->
     <header>
         <!-- Tu logo o título principal -->
-        <h1>"Sevanandi"</h1>
+        <h1>Sevanandi</h1>
+        <p class="subtitulo-header">Yoga Integral, Filosofía y Biodescodificación</p>
         
         <!-- LANDMARK: Menú de navegación -->
         <nav aria-label="Menú principal">
             <ul>
-                <li><a href="#seccion1">Enlace 1</a></li>
-                <li><a href="#seccion2">Enlace 2</a></li>
+                
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#carrusel-chakras">Nuevos Ciclos</a></li>
+                <li><a href="#ciclo-1">Primer Ciclo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- LANDMARK: Contenido principal de la página -->
-    <main>
+<main>
 
-        <!-- Sección de Bienvenida / Principal -->
-        <section>
-            <h2>Encuentra tu equilibrio y bienestar</h2>
-            <p>"Animarte a dar el primer paso en el mundo del Yoga es mucho más que aprender posturas; es regalarte una pausa para cambiar el enfoque con el que miras tu día a día. Cuando te sumerges en la respiración conciente y la escucha interna, la vida se empieza a mover desde otro lugar: con más calma, presencia y equilibrio.
-            <img src="imágenes/yoga-port.webp" alt="Portada de Yoga" style="width: 100%; max-width: 400px; border-radius: 8px; margin-top: 15px;">
-        </section>
+    <!-- Sección de Bienvenida / Principal -->
+    <section id="inicio">
+        <h2>Regálate una pausa para reconectar con tu calma y presencia</h2>
+        <p>Practica a tu propio ritmo desde casa, comprende el mapa emocional de tu cuerpo y transforma el movimiento en sanación consciente.</p>
+        
+        <img src="imágenes/yoga-port.webp" alt="Portada de Yoga Sevanandi" style="width: 100%; max-width: 100%; border-radius: 8px; margin-top: 15px;">
+    </section> <!-- AQUÍ FALTABA CERRAR LA SECCIÓN ANTERIOR -->
 
-        <!-- Sección de Contenido / Clases / Servicios -->
-        <!-- Elemento 1: Yoga Integral y Vinyasa -->
-            <article>
-                <h3>Yoga Integral y Vinyasa</h3>
-                <p>Un espacio para conectar con tu cuerpo, ganar flexibilidad y mover la energía a través de la respiración consciente y el movimiento fluido.</p>
-            </article>
 
-            <!-- Elemento 2: Meditación con Cuencos -->
-            <article>
-                <h3>Meditación con Cuencos</h3>
-                <p>Sumérgete en una experiencia de profunda relajación guiada por las vibraciones de los cuencos tibetanos y mantras que armonizan tu mente.</p>
-            </article>
+    <!-- Sección Multimedia: Clase Muestra de Portada y Cuestionario -->
+    <section id="multimedia">
+        <h2>Prueba nuestra Clase Muestra de Bienvenida</h2>
+        <p>Un ejercicio breve de 2 minutos sentado (Variante de Águila / Garudasana) para liberar la tensión de tus hombros y calmar tu mente en el acto.</p>
+        
+        <!-- VIDEO DE BIENVENIDA DESDE YOUTUBE -->
+        <div class="video-contenedor">
+            <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/jla3D_Sad5c" 
+                title="Prueba nuestra Clase Muestra de Bienvenida" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
 
-            <!-- Elemento 3: Retiros y Encuentros -->
-            <article>
-                <h3>Retiros y Encuentros</h3>
-                <p>Jornadas especiales diseñadas para frenar la rutina, respirar al aire libre y compartir la práctica en un entorno de calma y bienestar.</p>
-            </article>
+       <!-- Sección Autodiagnóstico Interactivo -->
+<section id="autodiagnostico" class="seccion-diagnostico">
+    <div class="diagnostico-encabezado">
+        <span class="badge-lanzamiento">🧘‍♀️ TU CUERPO TE HABLA</span>
+        <h2>¿Qué centro energético necesita tu atención hoy?</h2>
+        <p>Seleccioná la zona de tu cuerpo donde acumulás más tensión para descubrir su origen y tu recomendación.</p>
+    </div>
 
-            <!-- Elemento 4: Asesoría y Guía Personalizada -->
-            <article>
-                <h3>Asesoría y Guía Personalizada</h3>
-                <p>Acompañamiento adaptado a tus necesidades para que puedas integrar posturas, estiramientos y técnicas de respiración en tu día a día.</p>
-            </article>
+    <!-- Selector / Desplegable -->
+    <div class="caja-autodiagnostico">
+        <label for="select-zona" class="label-diagnostico"><strong>1. Seleccioná tu molestia principal:</strong></label>
+        <select id="select-zona" class="select-custom" onchange="mostrarDiagnostico()">
+            <option value="" disabled selected>-- Hacé clic acá para elegir tu zona --</option>
+            <option value="1">1. Pesadez en piernas, ciático o inseguridad física</option>
+            <option value="2">2. Rigidez en caderas, zona sacra o bloqueo creativo</option>
+            <option value="3">3. Tensión en el estómago, digestión lenta o ansiedad</option>
+            <option value="4">4. Opresión en el pecho, hombros caídos o duelos guardados</option>
+            <option value="5">5. Dolor de cuello, trapecios tensionados o "nudo" en la garganta</option>
+            <option value="6">6. Cansancio mental, migrañas por sobrepensar o insomnio</option>
+            <option value="7">7. Agotamiento biológico, prisa o desconexión general</option>
+        </select>
 
-            <!-- Elemento 1: Yoga Integral y Vinyasa -->
-            <article>
-                <h3>Yoga Integral y Vinyasa</h3>
-                <p>Un espacio para conectar con tu cuerpo, ganar flexibilidad y mover la energía a través de la respiración consciente y el movimiento fluido.</p>
-            </article>
-
-            <!-- Elemento 2: Meditación con Cuencos -->
-            <article>
-                <h3>Meditación con Cuencos</h3>
-                <p>Sumérgete en una experiencia de profunda relajación guiada por las vibraciones de los cuencos tibetanos y mantras que armonizan tu mente.</p>
-            </article>
-
-            <!-- Elemento 3: Retiros y Encuentros -->
-            <article>
-                <h3>Retiros y Encuentros</h3>
-                <p>Jornadas especiales diseñadas para frenar la rutina, respirar al aire libre y compartir la práctica en un entorno de calma y bienestar.</p>
-            </article>
-
-            <!-- Elemento 4: Asesoría y Guía Personalizada -->
-            <article>
-                <h3>Asesoría y Guía Personalizada</h3>
-                <p>Acompañamiento adaptado a tus necesidades para que puedas integrar posturas, estiramientos y técnicas de respiración en tu día a día.</p>
-            </article>
-<!-- Carrusel de 7 Posturas de Yoga -->
-            <div class="carrusel-container">
-                <h3>Prácticas Esenciales: 7 Posturas</h3>
-                <div class="carrusel-track">
-                    <div class="tarjeta-postura">
-                        <h4>1. Montaña</h4>
-                        <p>Mejora la postura y aporta estabilidad mental.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>2. Perro Abajo</h4>
-                        <p>Estira todo el cuerpo y alivia el estrés.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>3. Guerrero I</h4>
-                        <p>Aumenta la fuerza y la concentración.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>4. Árbol</h4>
-                        <p>Mejora el equilibrio físico y mental.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>5. Postura del Niño</h4>
-                        <p>Ideal para descansar y relajar la espalda.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>6. Cobra</h4>
-                        <p>Flexibiliza la columna y abre el pecho.</p>
-                    </div>
-                    <div class="tarjeta-postura">
-                        <h4>7. Savasana</h4>
-                        <p>Relajación total y integración profunda.</p>
-                    </div>
-                </div>
+        <!-- Cuadro de Respuesta que aparece debajo al seleccionar -->
+        <div id="resultado-diagnostico" class="caja-resultado-dinamico" style="display: none;">
+            <div class="header-resultado">
+                <span id="res-badge" class="badge-chakra">Chakra</span>
+                <h3 id="res-titulo">Título Chakra</h3>
+            </div>
+            
+            <p class="res-emocion"><strong>Origen emocional (Biodescodificación):</strong> <span id="res-emocion-texto">...</span></p>
+            
+            <div class="res-ejemplo-box">
+                <p><strong>🧘 Práctica de muestra:</strong> <span id="res-asana-texto">...</span></p>
+                <small class="res-aclaracion">💡 <em>Este es solo un ejemplo de las múltiples integraciones y asanas que trabajamos de forma continua para destrabar esta zona dentro de la Membresía Sevanandi.</em></small>
             </div>
 
+            <!-- Botón hacia el Embudo -->
+            <a href="#membresia" class="btn-embudo-diagnostico">
+                Con este autodiagnóstico, empezá a trabajar en el Ciclo Recomendado ➔
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Lógica Interactiva (JavaScript) -->
+<script>
+const datosChakras = {
+    "1": {
+        badge: "Chakra 1: Raíz (Muladhara)",
+        titulo: "Enraizamiento y Seguridad",
+        emocion: "Falta de sostén, miedo al futuro financiero y sobrecarga de responsabilidades.",
+        asana: "Posturas de enraizamiento (Tadasana, Virabhadrasana) y respiración de descarga a tierra."
+    },
+    "2": {
+        badge: "Chakra 2: Sacro (Svadhisthana)",
+        titulo: "Fluidez y Creatividad",
+        emocion: "Dificultad para fluir con los cambios, culpa retenida o desconexión del placer.",
+        asana: "Mariposas (Baddha Konasana), aperturas suaves de cadera y movimientos pélvicos circulares."
+    },
+    "3": {
+        badge: "Chakra 3: Plexo Solar (Manipura)",
+        titulo: "Poder Personal y Digestión Emocional",
+        emocion: "Exceso de control, autoexigencia y dificultad para digerir emociones intensas.",
+        asana: "Torsiones suaves de columna (Ardha Matsyendrasana) y respiración abdominal profunda."
+    },
+    "4": {
+        badge: "Chakra 4: Corazón (Anahata)",
+        titulo: "Apertura y Compasión"
+        emocion: "Necesidad de protección, corazas afectivas y dolor por pérdidas o duelos no procesados.",
+        asana: "Aperturas de pecho (Cobra suave / Bhujangasana) y respiración intercostal expansiva."
+    },
+    "5": {
+        badge: "Chakra 5: Garganta (Vishuddha)",
+        titulo: "Expresión y Liberación",
+        emocion: "Lo no dicho, rigidez mental para adaptarse y represión de la propia voz.",
+        asana: "Estiramientos cervicales conscientes, flexibilización de cuello y vocalización de mantras."
+    },
+    "6": {
+        badge: "Chakra 6: Tercer Ojo (Ajna)",
+        titulo: "Calma Mental e Intuición",
+        emocion: "Mente sobrecargada de análisis, exceso de pantallas y desconexión intuitiva.",
+        asana: "Postura del Niño (Balasana) apoyando frente en el mat y descanso ocular."
+    },
+    "7": {
+        badge: "Chakra 7: Corona (Sahasrara)",
+        titulo: "Conexión y Descanso Profundo",
+        emocion: "Cansancio acumulado del sistema nervioso por postergar pausas reales de descanso.",
+        asana: "Relajación restaurativa en suelo (Savasana guiado) con sonidos de cuencos."
+    }
+};
+
+function mostrarDiagnostico() {
+    const select = document.getElementById("select-zona");
+    const valor = select.value;
+    const cajaResultado = document.getElementById("resultado-diagnostico");
+
+    if (valor && datosChakras[valor]) {
+        document.getElementById("res-badge").innerText = datosChakras[valor].badge;
+        document.getElementById("res-titulo").innerText = datosChakras[valor].titulo;
+        document.getElementById("res-emocion-texto").innerText = datosChakras[valor].emocion;
+        document.getElementById("res-asana-texto").innerText = datosChakras[valor].asana;
+        
+        cajaResultado.style.display = "block";
+    }
+}
+</script>
+
+    <!-- Sección "Sobre Mí" (Tu Historia + Foto Redondeada) -->
+    <section id="sobre-mi">
+
+
+        
+           <h2>Sobre mí</h2>
+        <blockquote class="texto-manuscrito">
+            "El yoga no es flexibilidad ni teoría: es un hábito de amor propio que se vive en el cuerpo a cualquier edad."
+        </blockquote>
+
+        <p>Descubrí el yoga a los 18 años. Aunque en ese momento no comprendía del todo su alcance, al salir de aquella primera clase experimenté una sensación de paz y liviandad que jamás olvidé.</p>
+
+        <p>Años más tarde, con la llegada de la maternidad y buscando calmar el ruido mental cotidiano, el yoga volvió a mi vida como un refugio de reconexión profunda. A mis 50 años puedo decir con certeza que esta práctica no solo transformó mi día a día, sino que cambió mi vida por completo. Fue así como decidí abrazar el profesorado no solo como una profesión, sino como un verdadero camino de vida para compartir con otros el bienestar, la pausa y la sanación que yo misma experimenté.</p>
+
+        <p>Hoy entiendo que el yoga no exige flexibilidad previa ni un cuerpo perfecto; es un puente para escucharte y habitarte con presencia. De esa intención nació Sevanandi: un espacio en línea cercano, cálido y libre de juicios, creado para acompañarte a tu propio ritmo a recuperar tu equilibrio interior.</p>
+
+        <div class="contenedor-foto-instructora">
+            <img src="imágenes/yo, kayak.jpeg" alt="Foto personal de la instructora de Sevanandi" class="img-instructora">
+        </div>
+
+
         </section>
 
-        <!-- Sección Multimedia (para tus videos o imágenes) -->
-        <section id="seccion2">
-            <h2>Espacio multimedia</h2>
-            <p>Aquí puedes integrar tus videos (con la etiqueta &lt;video&gt;) o galerías de imágenes (&lt;img&gt;).</p>
-            
-            <!-- Ejemplo de contenedor para un video tuyo -->
-            <!-- 
-            <video controls>
-                <source src="tu-video.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video> 
-            -->
-        </section>
+      <!-- Carrusel de 7 Posturas y Chakras (Adelanto de Beneficios) -->
+<section id="carrusel-chakras">
+    <div class="carrusel-container">
+        
+        <!-- Encabezado con Introducción y Botón de Embudo -->
+        <div class="encabezado-carrusel" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+            <div class="texto-intro" style="max-width: 650px;">
+                <h2 style="margin-bottom: 10px;">Recorrido por nuevos ciclos: Chakras y sus armonizaciones</h2>
+                <p>Descubrí lo que viviremos en nuestros próximos encuentros para equilibrar tu energía. Una experiencia profunda que combina el trabajo corporal de cada postura con afirmaciones inspiradas en Louise Hay para sanar de forma integral.</p>
+            </div>
+            <div class="boton-intro">
+                <a href="#membresia" class="btn-suscripcion" style="padding: 12px 24px; background-color: #2a9d8f; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">Quiero sumarme al próximo ciclo</a>
+            </div>
+        </div>
 
-        <!-- LANDMARK: Información complementaria o barra lateral -->
-        <aside aria-label="Información complementaria">
-            <h3>Título secundario o nota importante</h3>
-            <p>Texto complementario, frases, o avisos breves...</p>
-        </aside>
+        <!-- Carrusel de Tarjetas -->
+<div class="carrusel-track">
+    <!-- Chakra 1 -->
+    <div class="tarjeta-postura">
+        <h4>1. Raíz (Muladhara)</h4>
+        <img src="imágenes/muladhara provisorio.jpeg" alt="Postura del Guerrero I" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Virabhadrasana I (Guerrero I)</p>
+        <p><em>Fortalece tus piernas y ancla tus pies a la tierra. Cultiva seguridad, presencia y estabilidad interior.</em></p>
+    </div>
 
+    <!-- Chakra 2 -->
+    <div class="tarjeta-postura">
+        <h4>2. Sacro (Svadhisthana)</h4>
+        <img src="imágenes/swadhistana provisorio.jpeg" alt="Postura de la Paloma" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Kapotasana (La Paloma)</p>
+        <p><em>Suelta la tensión en caderas y libera emociones guardadas. Reconecta con tu fluidez, gozo y creatividad.</em></p>
+    </div>
+
+    <!-- Chakra 3 -->
+    <div class="tarjeta-postura">
+        <h4>3. Plexo Solar (Manipura)</h4>
+        <img src="imágenes/manipura provisorio.jpeg" alt="Postura del Bote" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Navasana / Naukasana (El Bote)</p>
+        <p><em>Enciende tu centro abdominal y fortalece tu voluntad. Reafirma tu autoestima y tu poder personal.</em></p>
+    </div>
+
+    <!-- Chakra 4 -->
+    <div class="tarjeta-postura">
+        <h4>4. Corazón (Anahata)</h4>
+        <img src="imágenes/Anahata provisorio.jpeg" alt="Postura de la Cobra" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Bhujangasana (La Cobra)</p>
+        <p><em>Abre el pecho y suaviza la rigidez dorsal. Libera corazas emocionales y ábrete al amor compasivo.</em></p>
+    </div>
+
+    <!-- Chakra 5 -->
+    <div class="tarjeta-postura">
+        <h4>5. Garganta (Vishuddha)</h4>
+        <img src="imágenes/vishuda provisorio.jpeg" alt="Postura del Camello" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Ustrasana (El Camello)</p>
+        <p><em>Libera la garganta y el cuello. Expresa tu verdad con claridad, confianza y comunicación auténtica.</em></p>
+    </div>
+
+    <!-- Chakra 6 -->
+    <div class="tarjeta-postura">
+        <h4>6. Tercer Ojo (Ajna)</h4>
+        <img src="imágenes/ajña provisorio.jpeg" alt="Postura del Caracol" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Jambukasana (El Caracol)</p>
+        <p><em>Calma el ruido mental y relaja la mirada. Despeja la mente para conectar con tu intuición profunda.</em></p>
+    </div>
+
+    <!-- Chakra 7 -->
+    <div class="tarjeta-postura">
+        <h4>7. Corona (Sahasrara)</h4>
+        <img src="imágenes/sahasrara provisorio.jpeg" alt="Postura del Pez" style="width: 100%; border-radius: 4px;">
+        <p><strong>Postura Muestra:</strong> Matsyasana (El Pez)</p>
+        <p><em>Abre la coronilla y profundiza la respiración. Experimenta una sensación de integración, serenidad y paz.</em></p>
+    </div>
+</div>
+
+       <!-- Sección Ciclo 1: El Despertar y la Escucha Consciente -->
+<section id="ciclo-1" class="seccion-ciclo">
+    
+    <!-- Encabezado del Ciclo -->
+    <div class="ciclo-encabezado">
+        <span class="badge-programa">Programa Exclusivo</span>
+        <h2>Ciclo 1: El Despertar y la Escucha Consciente</h2>
+        <p class="ciclo-subtitulo">5 Clases pensadas para acompañarte a tu propio ritmo, comprender el origen de tus tensiones y sanar tu cuerpo desde la biodescodificación.</p>
+    </div>
+
+    <!-- Contenedor de las 5 Etapas -->
+    <div class="ciclo-grid">
+
+        <!-- Clase 1 -->
+        <article class="tarjeta-etapa">
+            <div class="etapa-contenido">
+                <span class="etapa-numero">🧘‍♀️ ETAPA 1</span>
+                <h3>Espalda Completa <br><small>(Sostén y Estabilidad)</small></h3>
+                <p><strong>Enfoque:</strong> Recorrido por la columna alta, media y baja.</p>
+                <p><strong>Emoción a Transformar:</strong> De la sobrecarga, la culpa y la inseguridad <span class="destacado-transformacion">➔ Hacia la ligereza, la soltura de cargas ajenas y la confianza en tu sostén</span>.</p>
+            </div>
+            <p class="etapa-metodo">✨ <strong>El Método:</strong> Posturas específicas, respiración de descarga, mantras y frases de afirmación para sanar el sostén corporal.</p>
+        </article>
+
+        <!-- Clase 2 -->
+        <article class="tarjeta-etapa">
+            <div class="etapa-contenido">
+                <span class="etapa-numero">🧘‍♀️ ETAPA 2</span>
+                <h3>Cervicales y Garganta <br><small>(Expresión y Flexibilidad)</small></h3>
+                <p><strong>Enfoque:</strong> Descompresión de cuello, trapecios y canal vocal.</p>
+                <p><strong>Emoción a Transformar:</strong> De la rigidez mental y lo no dicho <span class="destacado-transformacion">➔ Hacia la flexibilidad de pensamiento, la adaptación y la libre expresión con amor</span>.</p>
+            </div>
+            <p class="etapa-metodo">✨ <strong>El Método:</strong> Asanas para soltar el cuello, técnicas de respiración, sonido/mantra vocal y frases para liberar lo reprimido.</p>
+        </article>
+
+        <!-- Clase 3 -->
+        <article class="tarjeta-etapa">
+            <div class="etapa-contenido">
+                <span class="etapa-numero">🧘‍♀️ ETAPA 3</span>
+                <h3>Caderas y Pelvis <br><small>(Fluidez y Soltura)</small></h3>
+                <p><strong>Enfoque:</strong> Apertura pélvica y flexibilización de articulación coxofemoral.</p>
+                <p><strong>Emoción a Transformar:</strong> Del miedo al cambio y el exceso de control <span class="destacado-transformacion">➔ Hacia la fluidez, la soltura del futuro y la confianza en tu camino</span>.</p>
+            </div>
+            <p class="etapa-metodo">✨ <strong>El Método:</strong> Secuencia de apertura pélvica, respiración guiada, mantras y afirmaciones de Biodescodificación para soltar.</p>
+        </article>
+
+        <!-- Clase 4 -->
+        <article class="tarjeta-etapa">
+            <div class="etapa-contenido">
+                <span class="etapa-numero">🧘‍♀️ ETAPA 4</span>
+                <h3>Pecho y Corazón <br><small>(Apertura y Compasión)</small></h3>
+                <p><strong>Enfoque:</strong> Expansión torácica y apertura del área del esternón.</p>
+                <p><strong>Emoción a Transformar:</strong> De las corazas defensivas y duelos guardados <span class="destacado-transformacion">➔ Hacia la reconciliación, la receptividad y el amor propio</span>.</p>
+            </div>
+            <p class="etapa-metodo">✨ <strong>El Método:</strong> Aperturas de pecho, pranayama intercostal, vibración con mantras y frases para suavizar el corazón.</p>
+        </article>
+
+        <!-- Clase 5 -->
+        <article class="tarjeta-etapa etapa-destacada">
+            <div class="etapa-contenido">
+                <span class="etapa-numero">🧘‍♀️ ETAPA 5</span>
+                <h3>Sistema Nervioso & Sonido <br><small>(Paz y Presencia)</small></h3>
+                <p><strong>Enfoque:</strong> Práctica restaurativa de piso con cuencos de canto.</p>
+                <p><strong>Emoción a Transformar:</strong> De la prisa diaria, el estrés y la ansiedad <span class="destacado-transformacion">➔ Hacia el descanso biológico profundo, la calma mental y la paz interior</span>.</p>
+            </div>
+            <p class="etapa-metodo">✨ <strong>El Método:</strong> Asanas restaurativas de piso, meditación en 3 tiempos, viaje sonoro con cuencos, mantras y frases de cierre.</p>
+        </article>
+
+    </div>
+
+    <!-- Caja Destacada: El Plus del Método -->
+    <div class="caja-valor-metodo">
+        <h4>🌟 Valor Exclusivo: Lo que incluye CADA una de las 5 Clases en su video</h4>
+        <div class="grid-valor-metodo">
+            <div class="columna-valor">
+                <p>🧘‍♀️ <strong>Posturas Muestra & Variantes Adaptadas</strong> a tu nivel corporal.</p>
+                <p>🌬 <strong>Pranayamas & Respiración Guiada</strong> (incluye meditaciones y viaje sonoro).</p>
+            </div>
+            <div class="columna-valor">
+                <p>🎵 <strong>Canto & Trabajo con Mantras</strong> para elevar la vibración.</p>
+                <p>✨ <strong>Frases de Armonización</strong> de Biodescodificación e inspiradas en Louise Hay.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+      
+
+       <!-- Sección de Precios -->
+<section id="precios" class="seccion-precios">
+    <div class="precios-encabezado">
+        <span class="badge-lanzamiento">Oportunidad de Lanzamiento</span>
+        <h2>Opciones de Inscripción</h2>
+        <p>Elegí la modalidad que mejor se adapte a tu ritmo y momento de práctica.</p>
+    </div>
+
+    <div class="precios-grid">
+
+        <!-- Opción 1: Pack Ciclo 1 (ÚNICO BOTÓN ABAJO) -->
+        <article class="tarjeta-precio">
+            <div>
+                <span class="badge-opcion">Pago Único</span>
+                <h3>Pack Ciclo 1</h3>
+                <p class="precio-descripcion">Acceso al primer nivel completo a tu propio ritmo.</p>
+
+                <div class="caja-precio">
+                    <span class="precio-tachado">$XX.XXX</span>
+                    <span class="precio-lanzamiento">$XX.XXX</span>
+                    <small class="precio-aclaracion">Precio especial por lanzamiento</small>
+                </div>
+
+                <ul class="lista-beneficios">
+                    <li>✓ Acceso por 6 meses a las 5 clases grabadas.</li>
+                    <li>✓ Practicá las veces que quieras, a tu horario.</li>
+                    <li>✓ Guía de Biodescodificación de regalo.</li>
+                </ul>
+            </div>
+
+            <a href="https://LINK_DE_PAGO_CICLO1" class="btn-tarjeta btn-secundario">Quiero empezar el 1er ciclo ➔</a>
+        </article>
+
+        <!-- Opción 2: Membresía Sevanandi (ÚNICO BOTÓN ABAJO) -->
+        <article id="membresia" class="tarjeta-precio destacada">
+            <div>
+                <span class="badge-opcion-popular">Opción Recomendada</span>
+                <h3>Membresía Sevanandi</h3>
+                <p class="precio-descripcion">Suscripción Mensual - Temporada 2026</p>
+
+                <div class="caja-precio">
+                    <span class="precio-lanzamiento">$XX.XXX / mes</span>
+                    <small class="precio-aclaracion">Acceso completo • Acompañamiento</small>
+                </div>
+
+                <ul class="lista-beneficios">
+                    <li>✓ Acceso ilimitado al Ciclo 1 completo.</li>
+                    <li>✓ Ingreso al canal privado de WhatsApp.</li>
+                    <li>✓ Acompañamiento y reflexiones semanales.</li>
+                    <li>✓ Nuevas clases continuas mes a mes.</li>
+                    <li>✓ Sin permanencia obligatoria (cancelás cuando querés).</li>
+                </ul>
+            </div>
+
+            <a href="https://LINK_DE_PAGO_MEMBRESIA" class="btn-tarjeta btn-principal">Unirme a la Membresía 2026 ➔</a>
+        </article>
+
+    </div>
+</section>
+
+<!-- Sección Pausa Consciente Diaria -->
+<section class="seccion-pausa">
+    <div class="caja-pausa-destacada">
+        <h3 class="titulo-pausa">Pausa Consciente Diaria</h3>
+        <p class="frase-pausa">"No necesitás horas de práctica ni flexibilidad avanzada; regalarte 10 minutos al día para respirar en presencia es suficiente para transformar tu bienestar."</p>
+    </div>
+</section>
+        
     </main>
 
     <!-- LANDMARK: Pie de página y contacto -->
     <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>Tus datos de contacto o redes...</p>
+        <h2>Contacto Sevanandi</h2>
+        <p>¿Tienes dudas sobre cómo empezar o qué opción elegir? Escríbeme y te acompaño con gusto.</p>
         
-        <!-- Información de contacto postal/física -->
+        <!-- Información de contacto -->
         <address>
-            <p>Dirección o ciudad</p>
-            <p>Email: <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></p>
+            <p>Atención Online — Argentina y el mundo</p>
+            <p>Email: <a href="mailto:contacto@sevanandi.com">contacto@sevanandi.com</a></p>
+            <p>WhatsApp Comercial: <a href="https://wa.me/TU_NUMERO_WHATSAPP" target="_blank">Enviar mensaje directo</a></p>
         </address>
 
-        <p>&copy; 2026 - Todos los derechos reservados.</p>
-    </footer>
+        <p class="nota-legal"><small>Nota Legal: La biodescodificación y el yoga integral son prácticas holísticas complementarias y no reemplazan el diagnóstico ni el tratamiento médico o psicológico profesional.</small></p>
 
+        <p>&copy; 2026 Sevanandi. Todos los derechos reservados.</p>
+    </footer>
+<!-- CÓDIGO PARA MOVIMIENTO AUTOMÁTICO DEL CARRUSEL -->
+<script>
+    const track = document.querySelector('.carrusel-track');
+    let paso = 1;
+    let intervalo = null;
+
+    function iniciarCarrusel() {
+        intervalo = setInterval(() => {
+            if (track) {
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) {
+                    track.scrollLeft = 0;
+                } else {
+                    track.scrollLeft += paso;
+                }
+            }
+        }, 30);
+    }
+
+    function pausarCarrusel() {
+        clearInterval(intervalo);
+    }
+
+    if (track) {
+        iniciarCarrusel();
+        track.addEventListener('mouseenter', pausarCarrusel);
+        track.addEventListener('mouseleave', iniciarCarrusel);
+        track.addEventListener('touchstart', pausarCarrusel);
+        track.addEventListener('touchend', iniciarCarrusel);
+    }
+</script>
+
+    <script>
+function mostrarDiagnostico() {
+    const select = document.getElementById("select-zona");
+    const valor = select.value;
+    const resultadoBox = document.getElementById("resultado-diagnostico");
+
+    const datosChakras = {
+        "1": {
+            chakra: "Chakra 1: Raíz (Muladhara)",
+            emocion: "Miedo al futuro, inseguridad económica, desarraigo o sensación de falta de sostén.",
+            asana: "Postura del Guerrero I (Virabhadrasana I) y ejercicios de enraizamiento de pies."
+        },
+        "2": {
+            chakra: "Chakra 2: Sacro (Svadhisthana)",
+            emocion: "Bloqueo de la creatividad, culpa sobre el placer o dificultad para adaptarse al cambio.",
+            asana: "Postura de la Paloma (Eka Pada Rajakapotasana) y aperturas suaves de cadera."
+        },
+        "3": {
+            chakra: "Chakra 3: Plexo Solar (Manipura)",
+            emocion: "Falta de poder personal, necesidad de control, digestión lenta o acumulación de ansiedad.",
+            asana: "Torsiones sentadas (Ardha Matsyendrasana) y fortalecimiento del centro corporativo (Core)."
+        },
+        "4": {
+            chakra: "Chakra 4: Corazón (Anahata)",
+            emocion: "Duelos guardados, dificultad para perdonar, cerrazón emocional o dolor en espalda alta.",
+            asana: "Postura del Camello (Ustrasana) y apertura del pecho apoyado sobre bolster."
+        },
+        "5": {
+            chakra: "Chakra 5: Garganta (Vishuddha)",
+            emocion: "Dificultad para decir lo que sentís, guardarte las cosas o sobrecargas ajenas en los hombros.",
+            asana: "Movimientos circulares de cuello consciente y Postura del Pez (Matsyasana)."
+        },
+        "6": {
+            chakra: "Chakra 6: Tercer Ojo (Ajna)",
+            emocion: "Sobrepensar, cansancio mental, insomnio por no desactivar la mente o desconexión intuitiva.",
+            asana: "Postura del Niño (Balasana) con la frente apoyada y respiración Chandra Bhedana."
+        },
+        "7": {
+            chakra: "Chakra 7: Corona (Sahasrara)",
+            emocion: "Agotamiento biológico, prisa constante, vacío interior o desconexión espiritual.",
+            asana: "Savasana guiado con atención plena y meditación de integración al cierre de clase."
+        }
+    };
+
+    if (datosChakras[valor]) {
+        const info = datosChakras[valor];
+        
+        document.getElementById("res-badge").innerText = info.chakra;
+        document.getElementById("res-titulo").innerText = "Recomendación para tu equilibrio";
+        document.getElementById("res-emocion-texto").innerText = info.emocion;
+        document.getElementById("res-asana-texto").innerText = info.asana;
+        
+        resultadoBox.style.display = "block";
+    }
+}
+</script>
 </body>
 </html>
